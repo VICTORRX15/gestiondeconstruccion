@@ -1,0 +1,79 @@
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+body.dark-mode .bg-light,
+body.dark-mode .sidebar {
+    background-color: #2c2c2c !important;
+    color: #ddd;
+}
+body.dark-mode .card {
+    background-color: #2c2c2c;
+    border-color: #444;
+}
+body.dark-mode .table {
+    color: #ddd;
+}
+.table-responsive {
+    overflow-x: auto;
+}
+.sidebar {
+    padding-left: 0;
+    padding-right: 0;
+}
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+.btn {
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.btn:hover {
+    transform: scale(1.02);
+}
+.progress {
+    border-radius: 10px;
+    overflow: hidden;
+}
+.progress-bar {
+    transition: width 0.5s ease;
+    font-weight: bold;
+}
+.vis-timeline {
+    border-radius: 10px;
+    border: none;
+}
+.vis-item {
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: transform 0.2s;
+}
+.vis-item:hover {
+    transform: scaleY(1.05);
+}
+.alert {
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.obras-page::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+    opacity: 0.05;
+    filter: grayscale(100%);
+    pointer-events: none;
+    z-index: 0;
+}

@@ -1,0 +1,102 @@
+/* Estilos específicos para la página de Mis Obras y Proyectos (controller=Obra) */
+.obras-page {
+    position: relative;
+    min-height: 80vh;
+}
+
+/* Fondo con logo opaco */
+.obras-page::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 35%;
+    opacity: 0.06;
+    filter: grayscale(100%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.obras-page .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Tarjeta del desarrollador en el sidebar */
+.developer-sidebar-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 15px 10px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.developer-sidebar-card:hover {
+    transform: translateY(-3px);
+}
+
+.developer-sidebar-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+    margin-bottom: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.developer-sidebar-name {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.developer-sidebar-title {
+    font-size: 0.7rem;
+    opacity: 0.9;
+    margin-bottom: 8px;
+}
+
+.developer-sidebar-bio {
+    font-size: 0.7rem;
+    line-height: 1.3;
+    opacity: 0.85;
+    margin-bottom: 10px;
+}
+
+.developer-sidebar-social {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.developer-sidebar-social a {
+    color: white;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.developer-sidebar-social a:hover {
+    transform: scale(1.2);
+    color: #ffd700;
+}
+
+/* Modo oscuro */
+body.dark-mode .obras-page::before {
+    opacity: 0.03;
+}
+
+body.dark-mode .developer-sidebar-card {
+    background: linear-gradient(135deg, #1e1e2f 0%, #2d2d44 100%);
+    border: 1px solid #444;
+}
